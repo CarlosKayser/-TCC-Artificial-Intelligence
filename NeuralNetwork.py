@@ -83,7 +83,7 @@ class NeuralNetwork:
                 obs = self.env.reset()
                 award = 0
                 while True:
-                    #self.env.render()
+                    self.env.render()
                     action = self.feedforward(obs, ind.weights)
                     obs, reward, done, info = self.env.step(action)
                     award += reward
